@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Job Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h2>💼 Job Tracker</h2>
+
+        <a href="index.html">
+            🏠 Dashboard
+        </a>
+
+        <a href="applications.html">
+            📋 Applications
+        </a>
+
+        <a href="profile.html">
+            👤 Profile
+        </a>
+
+        <a href="analytics.html" class="active">
+            📊 Analytics
+        </a>
+
+        <a href="settings.html">
+            ⚙️ Settings
+        </a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <div class="topbar">
+
+            <div>
+                <h1>Analytics Dashboard</h1>
+                <p>Your job application insights</p>
+            </div>
+
+            <button id="darkBtn">
+                🌙 Dark Mode
+            </button>
+
+        </div>
+
+        <!-- Cards -->
+        <div class="cards">
+
+            <div class="card">
+                <h3>🎯 Success Rate</h3>
+                <h1 id="successRate">0%</h1>
+            </div>
+
+            <div class="card">
+                <h3>📋 Total Applications</h3>
+                <h1 id="totalApplications">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>💼 Interviews</h3>
+                <h1 id="interviews">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>🏆 Offers</h3>
+                <h1 id="offers">0</h1>
+            </div>
+
+        </div>
+
+        <!-- Charts -->
+        <div class="chart-grid">
+
+            <div class="chart-container">
+                <h2>Application Status</h2>
+                <canvas id="statusChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>Applications Per Month</h2>
+                <canvas id="monthlyChart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="analytics.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+
+    <script src="firebase.js"></script>
+
+</body>
+</html>

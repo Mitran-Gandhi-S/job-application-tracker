@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Settings - Job Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+.settings-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.setting-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.setting-card:hover{
+    transform:translateY(-5px);
+}
+
+.setting-card h2{
+    margin-bottom:15px;
+    color:#2563eb;
+}
+
+.setting-card p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.setting-card button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.danger{
+    background:#ef4444 !important;
+}
+
+.success{
+    background:#10b981 !important;
+}
+
+body.dark .setting-card{
+    background:#1f2937;
+    color:white;
+}
+
+body.dark .setting-card p{
+    color:#cbd5e1;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+    <h2>💼 Job Tracker</h2>
+
+    <a href="index.html">
+        🏠 Dashboard
+    </a>
+
+    <a href="applications.html">
+        💼 Applications
+    </a>
+
+    <a href="profile.html">
+        👤 Profile
+    </a>
+
+    <a href="analytics.html">
+        📊 Analytics
+    </a>
+
+    <a href="settings.html"
+    class="active">
+        ⚙️ Settings
+    </a>
+
+</div>
+
+<!-- Main -->
+<div class="main">
+
+    <div class="topbar">
+
+        <div>
+            <h1>Settings</h1>
+            <p>
+                Manage your application data and preferences.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="settings-grid">
+
+        <!-- Theme -->
+
+        <div class="setting-card">
+
+            <h2>
+                🌙 Theme
+            </h2>
+
+            <p>
+                Switch between Light and Dark Mode.
+            </p>
+
+            <button id="darkBtn">
+                Toggle Dark Mode
+            </button>
+
+        </div>
+
+        <!-- Export -->
+
+        <div class="setting-card">
+
+            <h2>
+                📤 Export Applications
+            </h2>
+
+            <p>
+                Download your applications as CSV.
+            </p>
+
+            <button id="exportBtn">
+                Export CSV
+            </button>
+
+        </div>
+
+        <!-- Backup -->
+
+        <div class="setting-card">
+
+            <h2>
+                💾 Backup
+            </h2>
+
+            <p>
+                Download all applications as a JSON backup.
+            </p>
+
+            <button id="backupBtn">
+                Backup Data
+            </button>
+
+        </div>
+
+        <!-- Import -->
+
+        <div class="setting-card">
+
+            <h2>
+                📥 Import Backup
+            </h2>
+
+            <p>
+                Restore your saved applications.
+            </p>
+
+            <button id="importBtn">
+                Import Backup
+            </button>
+
+            <input
+            type="file"
+            id="importFile"
+            hidden
+            accept=".json">
+
+        </div>
+
+        <!-- Sample -->
+
+        <div class="setting-card">
+
+            <h2>
+                🚀 Sample Data
+            </h2>
+
+            <p>
+                Load demo applications.
+            </p>
+
+            <button
+            id="sampleBtn"
+            class="success">
+
+                Load Sample Data
+
+            </button>
+
+        </div>
+
+        <!-- Delete Applications -->
+
+        <div class="setting-card">
+
+            <h2>
+                🗑 Delete Applications
+            </h2>
+
+            <p>
+                Remove all saved applications.
+            </p>
+
+            <button
+            id="clearBtn"
+            class="danger">
+
+                Delete Applications
+
+            </button>
+
+        </div>
+
+        <!-- Delete Profile -->
+
+        <div class="setting-card">
+
+            <h2>
+                👤 Delete Profile
+            </h2>
+
+            <p>
+                Remove all profile information.
+            </p>
+
+            <button
+            id="clearProfileBtn"
+            class="danger">
+
+                Delete Profile
+
+            </button>
+
+        </div>
+
+        <!-- Reset -->
+
+        <div class="setting-card">
+
+            <h2>
+                ⚠ Reset Website
+            </h2>
+
+            <p>
+                Delete everything and start over.
+            </p>
+
+            <button
+            id="resetBtn"
+            class="danger">
+
+                Reset Website
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="settings.js"></script>
+
+</body>
+</html>

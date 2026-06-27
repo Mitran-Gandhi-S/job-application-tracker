@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Applications - Job Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <h2>Job Tracker</h2>
+
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="applications.html" class="active">💼 Applications</a>
+    <a href="profile.html">👤 Profile</a>
+    <a href="analytics.html">📊 Analytics</a>
+    <a href="settings.html">⚙️ Settings</a>
+
+</div>
+
+<div class="main">
+
+    <div class="topbar">
+        <h1>Applications</h1>
+
+        <button id="darkBtn">
+            🌙 Dark Mode
+        </button>
+    </div>
+
+    <div class="dashboard-cards">
+
+        <div class="card">
+            <h3>Total Applications</h3>
+            <h1 id="totalApps">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Interviews</h3>
+            <h1 id="interviews">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Rejections</h3>
+            <h1 id="rejections">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Offers</h3>
+            <h1 id="offers">0</h1>
+        </div>
+
+    </div>
+
+    <div class="toolbar">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Company">
+
+        <select id="filter">
+            <option value="All">All Status</option>
+            <option value="Applied">Applied</option>
+            <option value="Interview">Interview</option>
+            <option value="Offer">Offer</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+
+        <button id="addBtn">
+            + Add Application
+        </button>
+
+    </div>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Role</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<div class="modal" id="modal">
+
+    <div class="modal-box">
+
+        <h2>Add Application</h2>
+
+        <input
+            type="text"
+            id="company"
+            placeholder="Company Name">
+
+        <input
+            type="text"
+            id="role"
+            placeholder="Job Role">
+
+        <input
+            type="date"
+            id="date">
+
+        <select id="status">
+            <option value="">Select Status</option>
+            <option value="Applied">Applied</option>
+            <option value="Interview">Interview</option>
+            <option value="Offer">Offer</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+
+        <div class="buttons">
+
+            <button id="saveBtn">
+                Save
+            </button>
+
+            <button id="closeBtn">
+                Cancel
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="applications.js"></script>
+
+</body>
+</html>

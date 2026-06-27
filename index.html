@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Tracker Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+
+    <h2>Job Tracker</h2>
+
+    <a href="index.html" class="active">
+      🏠 Dashboard
+    </a>
+
+    <a href="applications.html">
+      💼 Applications
+    </a>
+
+    <a href="profile.html">
+      👤 Profile
+    </a>
+
+    <a href="analytics.html">
+      📊 Analytics
+    </a>
+
+    <a href="settings.html">
+      ⚙️ Settings
+    </a>
+
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <div class="topbar">
+
+      <div>
+        <h1 id="greeting">Welcome!</h1>
+        <p id="today"></p>
+      </div>
+
+      <div class="userBox">
+        <img
+          id="topProfile"
+          src="https://via.placeholder.com/50"
+          class="small-profile"
+        >
+      </div>
+
+      <button id="darkBtn">
+        🌙 Dark Mode
+      </button>
+
+    </div>
+
+    <!-- Dashboard Cards -->
+    <div class="cards">
+
+      <div class="card">
+        <h3>Total Applications</h3>
+        <h1 id="totalApps">0</h1>
+      </div>
+
+      <div class="card">
+        <h3>Interviews</h3>
+        <h1 id="interviews">0</h1>
+      </div>
+
+      <div class="card">
+        <h3>Rejections</h3>
+        <h1 id="rejections">0</h1>
+      </div>
+
+      <div class="card">
+        <h3>Offers</h3>
+        <h1 id="offers">0</h1>
+      </div>
+
+      <div class="card">
+        <h3>Pending Applications</h3>
+        <h1 id="pendingInterviews">0</h1>
+      </div>
+
+    </div>
+
+    <!-- Recent Applications -->
+    <div class="recent">
+
+      <h2>Recent Applications</h2>
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody id="recentApplications">
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+
+  <script src=firebase.js"></script>
+
+</body>
+</html>

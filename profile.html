@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Job Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h2>Job Tracker</h2>
+
+        <a href="index.html">
+            🏠 Dashboard
+        </a>
+
+        <a href="applications.html">
+            💼 Applications
+        </a>
+
+        <a href="profile.html" class="active">
+            👤 Profile
+        </a>
+
+        <a href="analytics.html">
+            📊 Analytics
+        </a>
+
+        <a href="settings.html">
+            ⚙️ Settings
+        </a>
+
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Topbar -->
+        <div class="topbar">
+
+            <h1>My Profile</h1>
+
+            <button id="darkBtn">
+                🌙 Dark Mode
+            </button>
+
+        </div>
+
+        <div class="profile-card">
+
+            <div class="profile-image-section">
+
+                <img
+                    id="profileImage"
+                    src="https://via.placeholder.com/150"
+                    alt="Profile Image"
+                >
+
+                <br><br>
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                >
+
+            </div>
+
+            <div class="profile-form">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Full Name"
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                >
+
+                <input
+                    type="text"
+                    id="phone"
+                    placeholder="Phone Number"
+                >
+
+                <input
+                    type="text"
+                    id="college"
+                    placeholder="College / University"
+                >
+
+                <input
+                    type="text"
+                    id="degree"
+                    placeholder="Degree"
+                >
+
+                <textarea
+                    id="about"
+                    placeholder="About Me"
+                    rows="5"
+                ></textarea>
+
+                <button id="saveProfileBtn">
+                    Save Profile
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="profile.js"></script>
+
+</body>
+</html>
